@@ -34,7 +34,7 @@ syntax match   jsParensError    /[)}\]]/
 syntax keyword jsStorageClass   const var let skipwhite skipempty nextgroup=jsDestructuringBlock,jsDestructuringArray,jsVariableDef
 syntax match   jsVariableDef    contained /\<\K\k*/ skipwhite skipempty nextgroup=jsFlowDefinition
 syntax keyword jsOperator       delete instanceof typeof void new in of skipwhite skipempty nextgroup=@jsExpression
-syntax match   jsOperator       "[-!|&+<>=%/*~^]" skipwhite skipempty nextgroup=@jsExpression
+syntax match   jsOperator       "\([!|&<>=%/*~^]\|+ \|- \)" skipwhite skipempty nextgroup=@jsExpression
 syntax match   jsOperator       /::/ skipwhite skipempty nextgroup=@jsExpression
 syntax keyword jsBooleanTrue    true
 syntax keyword jsBooleanFalse   false
